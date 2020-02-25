@@ -1,8 +1,12 @@
-body{
-  padding:0;
-  margin:0;
-  font-family: 'Open Sans', ;
-  color:#424143;
+$breakpoint-large: 991px;
+$breakpoint-medium: 850px;
+$breakpoint-small: 600px;
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: ("Open Sans",);
+    color: #424143;
 }
 
 ul {
@@ -14,196 +18,266 @@ ul {
 }
 
 li {
-    border-right:1px solid #fff;
+    border-right: 1px solid #fff;
     padding-right: 16px;
     padding-left: 16px;
-  &:last-child{
-    border-right:none;
-    padding-right:0;
-  }
+
+    &:last-child {
+        border-right: none;
+        padding-right: 0;
+    }
 }
 
-a{
-  color: #217a7c;
-  text-decoration:none;
+a {
+    color: #217a7c;
+    text-decoration: none;
 }
 
-p{
-  font-size:14px;
-  line-height:26px;
-  margin-top:0px;
+p {
+    font-size: 14px;
+    line-height: 26px;
+    margin-top: 0px;
 }
 
-h2{
-  font-size:28px;
-  font-family: 'Montserrat', ;
-  color: #e28a00;
-  font-weight:700;
-  margin:0 0 10px 0;
+h2 {
+    font-size: 28px;
+    font-family: ("Montserrat",);
+    color: #e28a00;
+    font-weight: 700;
+    margin: 0 0 10px 0;
 }
 
-nav{
-  position:fixed;
-  width:100%;
-  z-index:1000;
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
-.logo{
-  svg{
-    width:100px;
-  }
+.logo {
+    svg {
+        width: 100px;
+    }
 }
 
 .top-bar {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background: #424143;
     color: #fff;
-    text-transform:uppercase;
-    font-weight:700;
-    padding:0 40px;
-    height:90px;
-  .container{
-    padding-top:0;
-    padding-bottom:0;
-  }
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0 40px;
+    height: 90px;
+
+    .container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 
-.main{
-  width:100%;
-  position:absolute;
-  margin-top:90px;
+.main {
+    width: 100%;
+    position: absolute;
+    margin-top: 90px;
 }
 
 .hero {
-  width:100%;
-  height: 30vh;
+    width: 100%;
+    height: 30vh;
+
+    @media (max-width: $breakpoint-small) {
+        height: 200px;
+    }
 }
 
-.row{
-  width:100%;
-  height:100%;
-  display:flex;
-  flex-direction:row;
+.row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: $breakpoint-small) {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 50%;
+        height: 100%;
+        position: relative;
+
+        @media (max-width: $breakpoint-small) {
+            width: 100%;
+        }
+
+        &.middle {
+            display: flex;
+            background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1270439/lakefest-background.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            svg {
+                padding: 5%;
+                padding-bottom: 15%;
+                width: 100%;
+                height: auto;
+            }
+
+            .full-box-text {
+                background: rgba(66, 65, 67, 0.9);
+            }
+        }
+
+        &.w-image {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            &.right {
+                background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1270439/lake-asleep.jpg);
+
+                .full-box-text {
+                    background: rgba(226, 138, 0, 0.9);
+                }
+            }
+
+            &.left {
+                background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1270439/lake-siobahn-bw.jpg);
+                margin-right: -2px;
+
+                .full-box-text {
+                    background: rgba(33, 122, 124, 0.9);
+                }
+            }
+        }
+
+        &.content {
+            flex-grow: 1;
+
+            @media (max-width: $breakpoint-small) {
+                order: 2;
+            }
+        }
+
+        &.image {
+            padding-left: 50px;
+            width: 250px;
+
+            @media (max-width: $breakpoint-small) {
+                order: 1;
+                padding-left: 0px;
+                width: 100%;
+                margin-bottom: 25px;
+            }
+        }
+
+        &.pad-left {
+            padding-left: 40px;
+
+            @media (max-width: $breakpoint-small) {
+                padding-left: 0;
+            }
+        }
+    }
+
+    &.no-break {
+        display: flex;
+        flex-direction: row;
+
+        .column {
+            width: 50%;
+        }
+    }
 }
 
-.column {
-  width:50%;
-  height:100%;
-  position:relative;
-  &.middle {
-    display:flex;
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1270439/lakefest-background.jpg);
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    svg{
-      padding:5%;
-      padding-bottom:15%;
-      width:100%;
-      height:auto;
-    }
-    .full-box-text{
-      background: rgba(66, 65, 67, .9);
-      }
-  }
-  &.w-image {
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:cover;
-    &.right {
-      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1270439/lake-asleep.jpg);
-      .full-box-text{
-        background: rgba(226, 138, 0, .9);
-      }
-    }
-    &.left {
-      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1270439/lake-siobahn-bw.jpg);
-      margin-right:-2px;
-      .full-box-text{
-        background: rgba(33, 122, 124, .9);
-      }
-    }
-  }
-  
-  &.content{
-    flex-grow:1;
-  }
-  &.image{
-    padding-left:50px;
-    width:250px;
-  }
-  &.pad-left {
-    padding-left:40px;
-  }
-}
+.events {
+    .row {
+        justify-content: space-around;
+        flex-wrap: wrap;
 
-.events{
-  .row{
-    justify-content: space-around;
-    flex-wrap:wrap;
-    .column{
-      
-      width:40%;
-      min-height:270px;
-      text-align: center;
-      svg{
-        height:100px;
-        width:50%;
-        padding:20px;
-        padding-bottom:0px;
-      }
+        .column {
+            width: 40%;
+            min-height: 270px;
+            text-align: center;
+
+            @media (max-width: $breakpoint-small) {
+                width: 100%;
+            }
+
+            svg {
+                height: 100px;
+                width: 50%;
+                padding: 20px;
+                padding-bottom: 0px;
+            }
+        }
     }
-  }
-  h3{
-    display:inline-block;
-    width:45%;
-    padding-bottom:10px;
-    color:#e28a00;
-    border-bottom:1px solid #424143;
-  }
+
+    h3 {
+        display: inline-block;
+        width: 45%;
+        padding-bottom: 10px;
+        color: #e28a00;
+        border-bottom: 1px solid #424143;
+    }
 }
 
 .full-box-text {
     display: block;
     align-items: center;
     color: #fff;
-    text-transform:uppercase;
+    text-transform: uppercase;
     font-size: 14px;
     text-align: center;
     position: absolute;
     bottom: 0;
     width: 100%;
-  h3{
-    margin: 0;
-    padding: 10px;
-  }
+
+    h3 {
+        margin: 0;
+        padding: 10px;
+
+        @media (max-width: $breakpoint-small) {
+            padding: 7px;
+            font-size: 10px;
+        }
+    }
 }
 
-section{
-  margin:auto;
-  padding:30px 0;
-  /* border-bottom: 1px solid #8e8d8a; */
-  &.tickets{
-    background:#e8e8e7;
-  }
-  &.about{
-    border-bottom:2px solid #e8e8e7;
-  }
+section {
+    margin: auto;
+    padding: 30px 0;
+
+    /* border-bottom: 1px solid #8e8d8a; */
+    &.tickets {
+        background: #e8e8e7;
+    }
+
+    &.about {
+        border-bottom: 2px solid #e8e8e7;
+    }
 }
 
-.container{
-  max-width:980px;
-  margin:auto;
-  padding:20px;
+.container {
+    max-width: 980px;
+    margin: auto;
+    padding: 20px;
 }
 
-.circle-image{
-  width: 250px;
-  height:250px;
-  border-radius:50%;
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1270439/lake-rad-dads.jpg);
-  background-position:top center;
-  background-size:contain;
+.circle-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1270439/lake-rad-dads.jpg);
+    background-position: top center;
+    background-size: contain;
+
+    @media (max-width: $breakpoint-small) {
+        border-radius: 0;
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
