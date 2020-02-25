@@ -40,4 +40,19 @@ $(window).scroll(function() {
     });
 }).scroll();
 
+$(".read-more").click(function(){
+  $(".full-text").addClass("show").removeClass("hide");
+  $(".excerpt").addClass("hide").removeClass("show");
+  $(".full-text").removeClass("hide");
+  $(".excerpt").removeClass("show");
+});
+
+$(".read-less").click(function(){
+  $(".excerpt").addClass("show");
+  $(".full-text").addClass("hide");
+  $(".excerpt").removeClass("hide");
+  $(".full-text").removeClass("show");
+
+});
+
 });
