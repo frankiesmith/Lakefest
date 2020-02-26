@@ -3,7 +3,7 @@ $orange: #e28a00;
 $blue: #217a7c;
 
 $breakpoint-large: 991px;
-$breakpoint-medium: 850px;
+$breakpoint-medium: 750px;
 $breakpoint-small: 600px;
 
 body {
@@ -82,7 +82,7 @@ header {
 }
 
 .desktop-menu {
-    @media (max-width: $breakpoint-small) {
+    @media (max-width: $breakpoint-medium) {
         display: none;
     }
 }
@@ -410,7 +410,7 @@ $translateX: 0;
     padding-top: 5px;
     padding-bottom: 10px;
 
-    @media (min-width: $breakpoint-small) {
+    @media (min-width: $breakpoint-medium) {
         display: none;
     }
 }
@@ -456,7 +456,7 @@ $translateX: 0;
     -moz-box-shadow: 0px 10px 23px -1px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 10px 23px -1px rgba(0, 0, 0, 0.25);
 
-    @media (max-width: $breakpoint-small) {
+    @media (max-width: $breakpoint-medium) {
         display: block;
         background: url("../img/abstract-background-guitar.jpg") center no-repeat;
         background-size: cover;
@@ -471,7 +471,7 @@ $translateX: 0;
         justify-content: center;
         margin: 0;
 
-        @media (max-width: $breakpoint-small) {
+        @media (max-width: $breakpoint-medium) {
             display: block;
             width: 100%;
         }
@@ -484,17 +484,18 @@ $translateX: 0;
                 font-size: 22px;
             }
 
-            @media (max-width: $breakpoint-small) {
+            @media (max-width: $breakpoint-medium) {
                 display: block;
                 width: 100%;
                 text-align: center;
+                border: none;
             }
         }
     }
 }
 
 #menu-main-navigation-1 {
-    @media (max-width: $breakpoint-small) {
+    @media (max-width: $breakpoint-medium) {
         display: none;
     }
 }
