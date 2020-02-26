@@ -55,4 +55,13 @@ $(".read-less").click(function(){
 
 });
 
+    //smooth scroll to top
+    $('.logo').on('click', function(event){
+        event.preventDefault();
+        $('body,html').animate({
+            scrollTop: 0 ,
+            }, 700
+        );
+    });
+
 });
