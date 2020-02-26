@@ -45,6 +45,7 @@ li {
 a {
     color: $blue;
     text-decoration: none;
+    cursor: pointer;
 }
 
 button {
@@ -606,42 +607,36 @@ only show for tablet and up */
 
 /* Footer */
 footer {
-    background: gray;
+    background: $gray;
     color: #fff;
     position: relative;
+    padding: 20px 0;
 
     a {
         color: #fff;
         transition: .4s ease;
 
         &:hover {
-            color: red;
+            color: $orange;
             transition: .4s ease;
         }
     }
 }
 
 .copyright {
-    color: lighten(gray, 50%);
+    color: white;
     text-align: center;
-    font-size: .8rem;
-    font-weight: 700;
-    letter-spacing: .5px;
     position: absolute;
-    top: 50%;
-    bottom: 50%;
+    top: 25%;
+    bottom: 25%;
     left: 0;
     right: 0;
 
     p {
         margin: 0;
-
-        @media (max-width: $breakpoint-medium) {
-            margin: 20px 0 0 0;
-        }
     }
 
-    @media (max-width: $breakpoint-medium) {
+    @media (max-width: $breakpoint-small) {
         position: static;
     }
 }
@@ -653,8 +648,12 @@ footer {
     position: relative;
     z-index: 500;
 
-    @media (max-width: $breakpoint-medium) {
+    @media (max-width: $breakpoint-small) {
         text-align: center;
+    }
+
+    @media (max-width: $breakpoint-small) {
+        margin-bottom: 10px;
     }
 }
 

@@ -25,7 +25,8 @@ li {
 
 a {
   color: #217a7c;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
 
 button {
   color: #217a7c;
@@ -431,33 +432,28 @@ only show for tablet and up */
 
 /* Footer */
 footer {
-  background: gray;
+  background: #424143;
   color: #fff;
-  position: relative; }
+  position: relative;
+  padding: 20px 0; }
   footer a {
     color: #fff;
     transition: .4s ease; }
     footer a:hover {
-      color: red;
+      color: #e28a00;
       transition: .4s ease; }
 
 .copyright {
   color: white;
   text-align: center;
-  font-size: .8rem;
-  font-weight: 700;
-  letter-spacing: .5px;
   position: absolute;
-  top: 50%;
-  bottom: 50%;
+  top: 25%;
+  bottom: 25%;
   left: 0;
   right: 0; }
   .copyright p {
     margin: 0; }
-    @media (max-width: 850px) {
-      .copyright p {
-        margin: 20px 0 0 0; } }
-  @media (max-width: 850px) {
+  @media (max-width: 600px) {
     .copyright {
       position: static; } }
 
@@ -467,9 +463,12 @@ footer {
   word-spacing: 5px;
   position: relative;
   z-index: 500; }
-  @media (max-width: 850px) {
+  @media (max-width: 600px) {
     .social {
       text-align: center; } }
+  @media (max-width: 600px) {
+    .social {
+      margin-bottom: 10px; } }
 
 /* Mobile styling */
 @media only screen and (max-width: 39.9375em) {
