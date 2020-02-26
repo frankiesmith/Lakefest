@@ -310,6 +310,27 @@ header {
     }
 }
 
+.callout-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.callout {
+    text-align: left;
+    width: 500px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 10px 20px;
+    border-left: 2px solid orange;
+    display: inline-block;
+
+    @media (max-width: $breakpoint-small) {
+        font-size: 14px;
+        padding-left: 20px;
+        min-width: 250px;
+    }
+}
+
 .full-box-text {
     display: block;
     align-items: center;
