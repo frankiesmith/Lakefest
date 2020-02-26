@@ -79,6 +79,9 @@ header {
     padding-top: 0;
     padding-bottom: 0; }
 
+.hide {
+  display: none !important; }
+
 .main {
   width: 100%;
   position: absolute;

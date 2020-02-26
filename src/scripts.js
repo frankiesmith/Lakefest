@@ -23,7 +23,7 @@ jQuery('header').on('click','a',function(e){
 });
 
 $(window).scroll(function() {
-		var scrollDistance = $(window).scrollTop() +320;
+		var scrollDistance = $(window).scrollTop() +90;
 	
 		// Assign active class to nav links while scolling
 		$('.menu-section').each(function(i) {
@@ -32,12 +32,6 @@ $(window).scroll(function() {
 						$('.desktop-menu a').eq(i).addClass('active');
 				}
 		});
-        $('.menu-section').each(function(i) {
-        if ($(this).position().top <= scrollDistance) {
-            $('.desktop-menu a.active').removeClass('active');
-            $('.desktop-menu a').eq(i).addClass('active');
-        }
-    });
 }).scroll();
 
 $(".read-more").click(function(){
