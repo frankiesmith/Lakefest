@@ -473,7 +473,9 @@ footer {
   bottom: 25%;
   left: 0;
   right: 0;
-  z-index: 3000; }
+  z-index: 3000;
+  max-width: 300px;
+  margin: auto; }
   .copyright p {
     margin: 0; }
   @media (max-width: 600px) {
