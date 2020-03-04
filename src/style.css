@@ -61,8 +61,10 @@ header {
   .desktop-menu {
     display: none; } }
 
-.logo svg {
-  width: 100px; }
+.logo {
+  cursor: pointer; }
+  .logo svg {
+    width: 100px; }
 
 .top-bar {
   z-index: 1000;
